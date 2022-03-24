@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Product = ({item}) => {
@@ -5,7 +6,7 @@ const Product = ({item}) => {
         
         <div className='product_cart'>
             <div>
-                <img src={item.img} />
+                <img src={item.img} alt={'shoes'}/>
             </div>
             <div>
                 <h1 className='name'>{item.name}</h1>

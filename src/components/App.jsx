@@ -1,17 +1,23 @@
+
 import React, { useState } from 'react';
 import MainContainer from './MainContainer';
 import Search from './Search';
-import Product from './Product';
+import state from './state';
 
 
 const App = () => {
+  const [value, setValue] = useState('')
+
+    const filterState = state.filter(item => {
+        return item.name.toLowerCase().includes(value.toLowerCase())
+    })
   return (
     <div>
       <div>
-     <Search />
+     <Search  setValue={setValue}/>
       </div>
      <div>
-       <MainContainer />
+     <MainContainer filterState={filterState}/>
      </div>
     </div>
   );

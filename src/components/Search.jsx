@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
-import MainContainer from './MainContainer';
-import state from './state';
-const Search = () => {
-    const [value, setValue] = useState('')
+import React from 'react';
 
-    const filterState = state.filter(item => {
-        return item.name.toLowerCase().includes(value.toLowerCase)
-    })
+const Search = (props) => {
+    
     return (
         <div>
              <input className='inp' 
       type={'text'} 
       placeholder={'Поиск обуви'}
-     onChange={(e) => setValue(e.target.value)}
+     onChange={(e) => props.setValue(e.target.value)}
       />
-      <MainContainer filterState={filterState}/>
+     
         </div>
     );
 };
