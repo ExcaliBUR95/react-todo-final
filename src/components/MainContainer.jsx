@@ -3,7 +3,7 @@ import Product from './Product';
 
 
 
-const MainContainer = ({filterState}) => {
+const MainContainer = ({ filterState }) => {
 
     return (
         <div className='product_class'>
@@ -13,9 +13,6 @@ const MainContainer = ({filterState}) => {
                     key={index}
                 />
             })}
-
-
-           
         </div>
     );
 };

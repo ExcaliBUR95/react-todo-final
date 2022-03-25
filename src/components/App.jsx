@@ -6,19 +6,20 @@ import state from './state';
 
 
 const App = () => {
+  
   const [value, setValue] = useState('')
 
-    const filterState = state.filter(item => {
-        return item.name.toLowerCase().includes(value.toLowerCase())
-    })
+  const filterState = state.filter(item => {
+    return item.name.toLowerCase().includes(value.toLowerCase())
+  })
   return (
     <div>
       <div>
-     <Search  setValue={setValue}/>
+        <Search setValue={setValue} />
       </div>
-     <div>
-     <MainContainer filterState={filterState}/>
-     </div>
+      <div>
+        <MainContainer filterState={filterState} />
+      </div>
     </div>
   );
 };
